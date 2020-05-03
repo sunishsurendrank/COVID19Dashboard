@@ -1,0 +1,7 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB
+    type: influxdb
+    database: COVID19Report
+    url: http://localhost:8086

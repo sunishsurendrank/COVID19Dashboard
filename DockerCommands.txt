@@ -1,0 +1,28 @@
+docker rmi -f $(docker images -a -q)
+docker images
+docker build -t grafanaimage .
+https://github.com/CSSEGISandData/COVID-19.git
+----------------------------------------------------------
+RUN INFLUX DB
+_____________
+
+docker run -d --name=influxdb_test_sunish -p 8086:8086  influxdb
+
+docker exec -u 0 -it influxdb sh
+----------------------------------------------------------
+RUN GRAFANA
+_____________
+
+docker run -d --name=grafana_test_sunish -p 3000:3000 grafanaimage
+
+docker exec -u 0 -it grafana2 sh
+
+---------------------------------------------------------
+influxdb_test_bridge1
+05-01-2020
+
+docker run --network mynet pythonmachine
+
+http://172.17.0.4:8086
+
+influx DB ip : 172.17.0.3

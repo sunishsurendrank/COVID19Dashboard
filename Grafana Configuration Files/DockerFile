@@ -1,0 +1,14 @@
+# author
+#Sunish Kannembath
+
+#Download base image ubuntu 16.04
+FROM grafana/grafana:latest
+
+ENV GF_AUTH_DISABLE_LOGIN_FORM "true"
+ENV GF_AUTH_ANONYMOUS_ENABLED "true"
+ENV GF_AUTH_ANONYMOUS_ORG_ROLE "Admin"
+
+COPY ./local.yaml /etc/grafana/provisioning/dashboards/
+COPY ./dashboard.json /var/lib/grafana/dashboards/
+
+COPY ./influxdb.yaml /etc/grafana/provisioning/datasources
