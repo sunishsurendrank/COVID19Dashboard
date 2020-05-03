@@ -6,14 +6,14 @@ https://github.com/CSSEGISandData/COVID-19.git
 RUN INFLUX DB
 _____________
 
-docker run -d --name=influxdb_test_sunish -p 8086:8086  influxdb
+docker run -d --name=influxdb -p 8086:8086  influxdb
 
 docker exec -u 0 -it influxdb sh
 ----------------------------------------------------------
 RUN GRAFANA
-_____________
+___________
 
-docker run -d --name=grafana_test_sunish -p 3000:3000 grafanaimage
+docker run -d --name=grafana -p 3000:3000 grafanaimage
 
 docker exec -u 0 -it grafana2 sh
 
