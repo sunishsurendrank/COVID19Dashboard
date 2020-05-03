@@ -1,46 +1,47 @@
-# COVID19Dashboard
+# How to use the COVID19DashBoard Project -Documentation
 
-# Prerequisites
--User should have basic knowledge of python
+# Prerequisites before trying the project
+- User should have basic knowledge of Python.
 
--Install Python in you machine
+- Install Python in your machine.
 
--Install following Python Dependencies 
-  -pip3 install influxdb
-  -pip3 install pandas
+- Install following Python Dependencies 
+  - pip3 install influxdb
+  - pip3 install pandas
   
--Install git in your machine
+- Install git in your machine
   
- -Docker should be installed in your machine 
-   -User can follow below link to install 
+- Docker should be installed in your machine 
+   -User can follow below link to install Docker in your machine
    https://docs.docker.com/docker-for-windows/install/
+
+# Get started with the COVID19Dashboard Project
    
- #Step 1
+ # Step 1
  
- 1.git clone https://github.com/sunishsurendrank/COVID19Dashboard.git
+ - git clone https://github.com/sunishsurendrank/COVID19Dashboard.git
  
- Navigate to the cloned folder
+ - Navigate to the cloned folder
  
-2. git clone https://github.com/CSSEGISandData/COVID-19.git
+ - git clone https://github.com/CSSEGISandData/COVID-19.git
 
-#Step 2
+# Step 2
 
-Open PowerShell in the windows machine run Docker command
+- Open PowerShell in the windows machine run Docker command
+-Run below commnd to download the InfluxDB Docker Image from DockerHub and run it
+  - docker run -d --name=influxdb -p 8086:8086  influxdb
 
+# Step 3
 
-#Step 3
+- Run the python Script
+  - cd "\Python Script"
+  - python loaddb.py
 
-Run the python Script
-docker run -d --name=influxdb -p 8086:8086  influxdb
+# Step 4
+- Run below commnd to download the Grafana Docker Image from DockerHub and run it
+  - docker run -d --name=grafana -p 3000:3000 sunishsurendrank/grafanaimage:v1
 
-cd "\Python Script"
-python loaddb.py
+# Step 5
 
-#Step 4
-
-docker run -d --name=grafana -p 3000:3000 sunishsurendrank/grafanaimage:v1
-
-#Step 5
-
-Open Chrome and access http://localhost:300
+- Open Chrome and access http://localhost:300
 
