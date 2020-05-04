@@ -52,5 +52,5 @@ This documentation willl help user to Install the application in user windows ma
 
   - Open Chrome and access http://localhost:3000
 
-  ![](images/dashboard.png)
+  ![](picture/dashboard.png)
 
