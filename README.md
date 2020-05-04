@@ -52,5 +52,6 @@ This documentation willl help user to Install the application in user windows ma
 
   - Open Chrome and access http://localhost:3000
 
-  ![](picture/dashboard.png)
+![dashboard](https://user-images.githubusercontent.com/12937248/80937013-fa589c00-8df0-11ea-8367-b98cc3d9d289.PNG)
+
 
