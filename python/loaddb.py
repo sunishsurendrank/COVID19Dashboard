@@ -74,12 +74,12 @@ for row_index, row in csvReader.iterrows() :
     ]
     try:
         client.write_points(json_body)
-        print(json_body)
+        #print(json_body)
 
     except:
         print("error:Error happened while writing  to the Database")
 
-
+print(row_index)
 
 
 
