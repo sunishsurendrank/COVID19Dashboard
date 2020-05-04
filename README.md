@@ -1,4 +1,11 @@
-# How to use the COVID19DashBoard Project -Documentation
+# How to deploy the COVID19DashBoard Project in your machine
+
+This documentation willl help user to Install the application in user windows machine.This documentation steps are more focused on windows platform.
+
+- Author of this Document : Sunish Surendran Kannembath
+- Developer : Sunish Surendran Kannembath
+- Reach Sunish in LinkedIn : https://www.linkedin.com/in/sunishsurendrank/
+- Reach Sunish in Twitter : @sunishsurendran
 
 # Prerequisites before trying the project
 - User should have basic knowledge of Python.
@@ -17,31 +24,33 @@
 
 # Get started with the COVID19Dashboard Project
    
- # Step 1
- 
- - git clone https://github.com/sunishsurendrank/COVID19Dashboard.git
- 
- - Navigate to the cloned folder
- 
- - git clone https://github.com/CSSEGISandData/COVID-19.git
+  # Step 1
+  
+  - git clone https://github.com/sunishsurendrank/COVID19Dashboard.git
+  
+  - Navigate to the cloned folder
+  
+  - git clone https://github.com/CSSEGISandData/COVID-19.git
 
-# Step 2
+  # Step 2
 
-- Open PowerShell in the windows machine run Docker command
--Run below commnd to download the InfluxDB Docker Image from DockerHub and run it
-  - docker run -d --name=influxdb -p 8086:8086  influxdb
+  - Open PowerShell in the windows machine run Docker command
+  -Run below commnd to download the InfluxDB Docker Image from DockerHub and run it
+    - docker run -d --name=influxdb -p 8086:8086  influxdb
 
-# Step 3
+  # Step 3
 
-- Run the python Script
-  - cd "\Python Script"
-  - python loaddb.py
+  - Run the python Script
+    - cd "\Python Script"
+    - python loaddb.py
 
-# Step 4
-- Run below commnd to download the Grafana Docker Image from DockerHub and run it
-  - docker run -d --name=grafana -p 3000:3000 sunishsurendrank/grafanaimage:v1
+  # Step 4
+  - Run below commnd to download the Grafana Docker Image from DockerHub and run it
+    - docker run -d --name=grafana -p 3000:3000 sunishsurendrank/grafanaimage:v1
 
-# Step 5
+  # Step 5
 
-- Open Chrome and access http://localhost:300
+  - Open Chrome and access http://localhost:300
+  
+  ![](Images/dashboard.png)
 

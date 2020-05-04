@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b29c0720-68bd-47d6-bf47-33d54b94bf66" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Python Script/loaddb.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python Script/loaddb.py" afterDir="false" />
-    </list>
+    <list default="true" id="b29c0720-68bd-47d6-bf47-33d54b94bf66" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15520833" />
       <window_info anchor="bottom" id="TODO" order="6" />
