@@ -7,6 +7,9 @@ This documentation willl help user to Install the application in user windows ma
 - Reach Sunish in LinkedIn : https://www.linkedin.com/in/sunishsurendrank/
 - Reach Sunish in Twitter : @sunishsurendran
 
+## Architecture Diagram
+![architecture_diagram](https://user-images.githubusercontent.com/12937248/80937891-815b4380-8df4-11ea-90c2-dd656815d7bd.png)
+
 ## Prerequisites before trying the project
 - User should have basic knowledge of Python.
 
