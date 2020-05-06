@@ -40,7 +40,7 @@ client.create_database('COVID19Report')
 client.switch_database('COVID19Report')
 
 #For loop to Convert the Data read from CSV to JSON body.
-print("Creating data objects using csv data for dated {}..".format(formatted_date))
+print("Creating data objects using csv data for the date {}..".format(formatted_date))
 json_body = []
 for row_index, row in csvReader.iterrows() :
     country=row[3]
@@ -49,7 +49,6 @@ for row_index, row in csvReader.iterrows() :
     recovered =row[9]
     latitude =row[5]
     longitude =row[6]
-
     #Handling NaN
     if str(row[5]) == 'nan':
         latitude = 0.0
@@ -60,14 +59,15 @@ for row_index, row in csvReader.iterrows() :
             {
                 "measurement": "COVID19Report",
                 "tags": {
+                    "index":row_index,
                     "country":country,
                     "confirmed": confirmed,
                     "deaths": deaths,
                     "recovered": recovered,
                 },
                 "fields": {
-                    "countryname": country,
                     "confirmed": confirmed,
+                    "countryname": country,
                     "deaths": deaths,
                     "recovered": recovered,
                     "latitude":latitude,
@@ -77,10 +77,10 @@ for row_index, row in csvReader.iterrows() :
         ]
     except:
         print("error:Error happened while creating the json Object - {}".format(row_index))
-print("Found {} data objects".format(row_index))
+print("Found {} data objects".format(row_index+1))
 
 #JSON will be written to the Database
-print("Updating {} records in database..".format(row_index))
+print("Updating {} records in database..".format(row_index+1))
 client.write_points(json_body)
 client.close()
-print("Updated {} records in the database".format(row_index))
+print("Updated {} records in the database".format(row_index+1))
