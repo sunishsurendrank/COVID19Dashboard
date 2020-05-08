@@ -18,7 +18,7 @@ Scriptpath = os.getcwd()
 Projectpath = os.path.dirname(Scriptpath)
 date = datetime.date.today()
 formatted_date = datetime.date.strftime(date, "%m-%d-%Y")
-file_path = r"{0}\COVID-19\csse_covid_19_data\csse_covid_19_daily_reports\{1}.csv".format(Projectpath,formatted_date)
+file_path = r"{0}/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/{1}.csv".format(Projectpath,formatted_date)
 
 #Checking the Path exist, if not check with previous day from current date
 if(os.path.exists(file_path)):
@@ -26,7 +26,7 @@ if(os.path.exists(file_path)):
 else:
     yesterday = datetime.date.today() - datetime.timedelta(1)
     formatted_date = datetime.date.strftime(yesterday, "%m-%d-%Y")
-    file_path = r"{0}\COVID-19\csse_covid_19_data\csse_covid_19_daily_reports\{1}.csv".format(Projectpath,formatted_date)
+    file_path = r"{0}/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/{1}.csv".format(Projectpath,formatted_date)
 
 #Printing the File Path
 print ("Processing File",file_path)
@@ -35,7 +35,7 @@ print ("Processing File",file_path)
 csvReader = pd.read_csv(file_path)
 
 #Client Object Created to connect the InfluxDB
-client = InfluxDBClient(host='localhost',port=8086)
+client = InfluxDBClient(host='influxdb',port=8086)
 client.create_database('COVID19Report')
 client.switch_database('COVID19Report')
 

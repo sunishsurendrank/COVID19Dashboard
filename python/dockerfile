@@ -12,5 +12,5 @@ RUN pip3 install influxdb
 RUN git clone https://github.com/CSSEGISandData/COVID-19.git
 
 RUN mkdir -p /python
-COPY ./loaddb.py /python
+COPY ./loaddb-fordocker.py /python
 CMD ["python3", "/python/loaddb.py"]
