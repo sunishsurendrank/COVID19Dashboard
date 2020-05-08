@@ -9,6 +9,7 @@
 import pandas as pd
 import datetime
 import os
+import requests
 from influxdb import InfluxDBClient
 
 print("------Running loaddb Python Script-------")
@@ -18,9 +19,18 @@ Scriptpath = os.getcwd()
 Projectpath = os.path.dirname(Scriptpath)
 date = datetime.date.today()
 formatted_date = datetime.date.strftime(date, "%m-%d-%Y")
-file_path = r"{0}/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/{1}.csv".format(Projectpath,formatted_date)
+
+
+#Downloading the latest CSV file from the Git Repo
+filename = r"{0}.csv".format(formatted_date)
+downloadurl = r"https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/{0}".format(filename)
+print(downloadurl)
+file = requests.get(downloadurl)
+open(filename,'wb').write(file.content)
+
 
 #Checking the Path exist, if not check with previous day from current date
+file_path = r"{0}/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/{1}.csv".format(Projectpath,formatted_date)
 if(os.path.exists(file_path)):
     print("File exist")
 else:

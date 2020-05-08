@@ -2,27 +2,35 @@ docker rmi -f $(docker images -a -q)
 docker images
 docker build -t grafanaimage .
 https://github.com/CSSEGISandData/COVID-19.git
+
+----------------------------------------------------------
+NETWORK
+_______
+
+docker network ls
+
+docker network create covid19network
 ----------------------------------------------------------
 RUN INFLUX DB
 _____________
 
-docker run -d --name=influxdb -p 8086:8086  influxdb
+docker run -d --name=influxdb -p 8086:8086 --network covid19network influxdb
+
+docker exec -u 0 -it influxdb sh
+----------------------------------------------------------
+RUN Python Image
+_____________
+
+docker run -d --name=pythonimage --network covid19network pythonimage
 
 docker exec -u 0 -it influxdb sh
 ----------------------------------------------------------
 RUN GRAFANA
 ___________
 
-docker run -d --name=grafana -p 3000:3000 grafanaimage
+docker run -d --name=grafana -p 3000:3000 --network covid19network grafanaimage
 
 docker exec -u 0 -it grafana2 sh
 
 ---------------------------------------------------------
-influxdb_test_bridge1
-05-01-2020
 
-docker run --network mynet pythonmachine
-
-http://172.17.0.4:8086
-
-influx DB ip : 172.17.0.3
