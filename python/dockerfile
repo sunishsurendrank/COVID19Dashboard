@@ -1,0 +1,16 @@
+# author
+#Sunish Kannembath
+
+#Download base image python 16.04
+FROM python:latest
+
+RUN apt-get update
+RUN apt-get install -yq git
+RUN pip3 install pandas
+RUN pip3 install influxdb
+
+RUN git clone https://github.com/CSSEGISandData/COVID-19.git
+
+RUN mkdir -p /python
+COPY ./loaddb.py /python
+CMD ["python3", "/python/loaddb.py"]
