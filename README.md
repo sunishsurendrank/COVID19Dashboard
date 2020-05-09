@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
 # How to deploy the COVID19DashBoard Project in your machine
 
 This documentation willl help user to Install the application in user windows machine.This documentation steps are more focused on windows platform.
@@ -56,5 +58,13 @@ This documentation willl help user to Install the application in user windows ma
   - Open Chrome and access http://localhost:3000
 
 ![dashboard](https://user-images.githubusercontent.com/12937248/80937013-fa589c00-8df0-11ea-8367-b98cc3d9d289.PNG)
+
+ ## License
+ Copyright © 2020, [Sunish Surendran Kannembath](https://github.com/sunishsurendrank). 
+ Released under the [MIT License](LICENSE).
+ 
+
+
+
 
 
