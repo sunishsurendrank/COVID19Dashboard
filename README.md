@@ -14,17 +14,11 @@ This documentation willl help user to Install the application in user windows ma
 ## Architecture Diagram
 ![architecture_diagram](https://user-images.githubusercontent.com/12937248/80937891-815b4380-8df4-11ea-90c2-dd656815d7bd.png)
 
+## Comparison with old architecture Diagram
+
+
 ## Prerequisites before trying the project
-- User should have basic knowledge of Python.
 
-- Install Python in your machine.
-
-- Install following Python Dependencies 
-  - pip3 install influxdb
-  - pip3 install pandas
-  
-- Install git in your machine
-  
 - Docker should be installed in your machine 
    -User can follow below link to install Docker in your machine
    https://docs.docker.com/docker-for-windows/install/
@@ -32,28 +26,22 @@ This documentation willl help user to Install the application in user windows ma
 ## Get started with the COVID19Dashboard Project
    
   ## Step 1
-  
-  - git clone https://github.com/sunishsurendrank/COVID19Dashboard.git
-  
-  - Navigate to the cloned folder
-  
-  - git clone https://github.com/CSSEGISandData/COVID-19.git
-
+   - Open PowerShell in the windows machine run Docker command
+   - Create a Private network for Docker with name COVID19DashboardbNetwork
+   - docker create network COVID19DashboardbNetwork
+   
   ## Step 2
-
-  - Open PowerShell in the windows machine run Docker command
-  -Run below commnd to download the InfluxDB Docker Image from DockerHub and run it
-    - docker run -d --name=influxdb -p 8086:8086  influxdb
+  -Run below command to download the InfluxDB Docker Image from DockerHub and run as a container
+    - docker run -d -p 8086:8086 --network COVID19DashboardbNetwork --name influxdb influxdb
 
   ## Step 3
 
-  - Run the python Script
-    - cd "\Python Script"
-    - python loaddb.py
+  -  Run below commnd to download the Python Script image from DockerHub and run as a container
+   - docker run -d -p 3000:3000 --network COVID19DashboardbNetwork --name=pythonimage sunishsurendrank/pythonimage:v1
 
   ## Step 4
-  - Run below commnd to download the Grafana Docker Image from DockerHub and run it
-    - docker run -d --name=grafana -p 3000:3000 sunishsurendrank/grafanaimage:v1
+  - Run below commnd to download the Grafana Docker Image from DockerHub and run as a container
+    - docker run -d -p 3000:3000 --network COVID19DashboardbNetwork --name=grafana sunishsurendrank/grafanaimage:v1
 
   ## Step 5
 
