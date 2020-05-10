@@ -1,4 +1,5 @@
 docker rmi -f $(docker images -a -q)
+docker rm -f $(docker ps -a -q)
 docker images
 docker build -t grafanaimage .
 https://github.com/CSSEGISandData/COVID-19.git
