@@ -1,6 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-[![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/TheAlgorithms/Python/blob/master/CONTRIBUTING.md)&nbsp;
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/TheAlgorithms/Python/blob/master/CONTRIBUTING.md)&nbsp;
 
 # How to deploy the COVID19DashBoard Project in your machine
 
@@ -12,10 +10,10 @@ This documentation willl help user to Install the application in user windows ma
 - Reach Sunish in Twitter : @sunishsurendran
 
 ## Architecture Diagram
-![architecture_diagram](https://user-images.githubusercontent.com/12937248/80937891-815b4380-8df4-11ea-90c2-dd656815d7bd.png)
+![architecture_diagram_10-5-2020](https://user-images.githubusercontent.com/12937248/81503251-3499d000-9300-11ea-9f87-e46db5e74358.png)
 
 ## Comparison with old architecture Diagram
-
+![architecture_comparision](https://user-images.githubusercontent.com/12937248/81503256-382d5700-9300-11ea-84dc-53fced953e27.PNG)
 
 ## Prerequisites before trying the project
 
@@ -31,13 +29,13 @@ This documentation willl help user to Install the application in user windows ma
    - docker create network COVID19DashboardbNetwork
    
   ## Step 2
-  -Run below command to download the InfluxDB Docker Image from DockerHub and run as a container
+  - Run below command to download the InfluxDB Docker Image from DockerHub and run as a container
     - docker run -d -p 8086:8086 --network COVID19DashboardbNetwork --name influxdb influxdb
 
   ## Step 3
 
-  -  Run below commnd to download the Python Script image from DockerHub and run as a container
-   - docker run -d -p 3000:3000 --network COVID19DashboardbNetwork --name=pythonimage sunishsurendrank/pythonimage:v1
+  - Run below commnd to download the Python Script image from DockerHub and run as a container
+    - docker run -d -p 3000:3000 --network COVID19DashboardbNetwork --name=pythonimage sunishsurendrank/pythonimage:v1
 
   ## Step 4
   - Run below commnd to download the Grafana Docker Image from DockerHub and run as a container
