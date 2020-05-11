@@ -26,7 +26,7 @@ This documentation willl help user to Install the application in user windows ma
   ## Step 1
    - Open PowerShell in the windows machine run Docker command
    - Create a Private network for Docker with name COVID19DashboardbNetwork
-   - docker create network COVID19DashboardbNetwork
+        - docker network create COVID19DashboardbNetwork
    
   ## Step 2
   - Run below command to download the InfluxDB Docker Image from DockerHub and run as a container
